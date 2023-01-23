@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript Quiz</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="view-high-scores">View high scores</div>
+            <div id="timer">Time: <span id="time-left">0</span></div>
+        </header>
+        <main>
+            <section id="intro">
+                <h1 id="main-heading">JS Coding Quiz</h1>
+                <p id="intro-text">Try to answer the following Javascript-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                <button type="button" id="start-quiz">Start Quiz</button>
+            </section>
+            <!-- for testing purposes only - delete later -->
+            <section id="question">
+                <h2 id="question-heading">Question 1:</h2>
+                <p id="question-text">Commonly used data types <b>do not</b> include:</p>
+                <ul>
+                    <li><button type="button" id="answer-1">A. strings</button></li>
+                    <li><button type="button" id="answer-2">B. booleans</button></li>
+                    <li><button type="button" id="answer-3">C. alerts</button></li>
+                    <li><button type="button" id="answer-4">D. numbers</button></li>
+                </ul>
+                <div id="prev-answer">Correct!</div>
+            </section>
+            <section id="final-scoring">
+                <h2>Finished!</h2>
+                <p>Your final score is <span id="final-score">##</span>.</p>
+                <p>Enter initials: <input type="text" id="initials" name="initials"></input></p>
+                <button type="submit">Submit</button>
+            </section>
+            <section id="high-scores">
+                <h2>High Scores</h2>
+                <ol>
+                    <li><span>AB</span> - 22</li>
+                    <li><span>CD</span> - 20</li>
+                    <li><span>EF</span> - 18</li>
+                </ol>
+                <button type="button">Go Back</button><button type="button">Clear High Scores</button>
+            </section>
+            <!-- end testing -->
+        </main>
+        <script src="/assets/js/script.js"></script>
+    </body>
+</html>

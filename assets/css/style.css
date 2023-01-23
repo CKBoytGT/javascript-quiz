@@ -1,0 +1,160 @@
+:root {
+    --dark: #323330;
+    --accent: #f0db4f;
+    --hover: #f7eca6;
+    --white: #fff;
+}
+
+html {
+    min-height: 100%; /* forces gradient background to be fill the window */
+}
+
+body {
+    /* gradient background - code from cssgradient.io */
+    background: var(--dark);
+    background: -moz-linear-gradient(180deg, rgba(50,51,48,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(50,51,48,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(180deg, rgba(50,51,48,1) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323330",endColorstr="#000000",GradientType=1);
+    color: var(--white);
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Press Start 2P', sans-serif;
+    color: var(--accent);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+button {
+    margin-bottom: 20px;
+    box-shadow:   -4px 0 0 0 var(--accent),
+                 4px 0 0 0 var(--accent),
+                 0 -4px 0 0 var(--accent),
+                 0 4px 0 0 var(--accent);
+    border: none;
+    padding: 5px 10px;
+    background-color:  var(--accent);
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Press Start 2P', sans-serif;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+button:hover {
+    background-color: var(--hover);
+    box-shadow:   -4px 0 0 0 var(--hover),
+                 4px 0 0 0 var(--hover),
+                 0 -4px 0 0 var(--hover),
+                 0 4px 0 0 var(--hover);
+}
+
+input[type=text] {
+    border: 2px solid var(--accent);
+    padding: 5px;
+    background-color: #000;
+    font-family: 'Press Start 2P', sans-serif;
+    color: var(--accent);
+}
+
+input[type=text]:focus,
+input[type=text]:focus-visible {
+    border: 2px solid var(--white);
+    outline:none;
+    color: var(--white);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    margin: auto;
+    width: 50%;
+}
+
+#view-high-scores {
+    color: var(--accent);
+}
+
+#view-high-scores:hover,
+#view-high-scores:focus {
+    color: var(--hover);
+    cursor: pointer;
+}
+
+#timer {
+    color: var(--accent);
+}
+
+#time-left {
+    color: var(--white);
+}
+
+#intro {
+    text-align: center;
+}
+
+#intro p {
+    margin-bottom: 40px;
+}
+
+#question ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#question button {
+    text-transform: none;
+}
+
+#prev-answer {
+    font-style: italic;
+    color: var(--hover);
+}
+
+#high-scores ol {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+#high-scores li {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    background-color: var(--hover);
+    font-size: 20px;
+    color: var(--dark);
+}
+
+#high-scores span {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+#high-scores button {
+    margin-right: 20px;
+}
+
+@media (max-width: 912px) {
+    main {
+        width: 80%;
+    }
+
+    #question {
+        text-align: center;
+    }
+  }
