@@ -17,7 +17,7 @@ body {
     background: linear-gradient(180deg, rgba(50,51,48,1) 0%, rgba(0,0,0,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323330",endColorstr="#000000",GradientType=1);
     color: var(--white);
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -57,10 +57,12 @@ button:hover {
 }
 
 input[type=text] {
+    margin: 0px 10px;
     border: 2px solid var(--accent);
     padding: 5px;
     background-color: #000;
     font-family: 'Press Start 2P', sans-serif;
+    text-transform: uppercase;
     color: var(--accent);
 }
 
@@ -81,6 +83,15 @@ main {
     width: 50%;
 }
 
+
+/* class that hides elements when not in use */
+
+.display-none {
+    display: none;
+}
+
+/* header */
+
 #view-high-scores {
     color: var(--accent);
 }
@@ -99,27 +110,43 @@ main {
     color: var(--white);
 }
 
-#intro {
+/* intro message and game over */
+
+#intro, #game-over {
     text-align: center;
 }
 
-#intro p {
+#intro p,
+#game-over p {
     margin-bottom: 40px;
 }
 
-#question ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+/* question content */
 
 #question button {
+    display: block;
     text-transform: none;
 }
 
-#prev-answer {
+#question-answer-status {
     font-style: italic;
     color: var(--hover);
+}
+
+/* final score message */
+
+#final-score {
+    font-weight: bold;
+}
+
+#final-scoring button {
+    margin-top: 20px;
+}
+
+/* high scores */
+
+#high-scores {
+    margin-top: 60px;
 }
 
 #high-scores ol {
@@ -136,6 +163,7 @@ main {
     padding: 0 5px;
     background-color: var(--hover);
     font-size: 20px;
+    text-transform: uppercase;
     color: var(--dark);
 }
 
